@@ -7,23 +7,22 @@ import "../src/RushHourSolver.sol";
 import "../src/interface/IRushHourSolver.sol";
 import "../src/Helper.sol";
 
-contract RushHourPuzzleTest {
+contract RushHourSolverTest {
     using Helper for uint256;
-    RushHourSolver private rushHourPuzzle;
+    RushHourSolver private rushHourSolver;
 
     function setUp() public {
-        rushHourPuzzle = new RushHourSolver();
+        rushHourSolver = new RushHourSolver();
         console.log("\n>>> Initial conditions");
     }
 
-    function testSolveRushHourPuzzle() public view {
+    function testSolveRushHourSolver() public view {
         uint8[6][6] memory inputData = getInputData(4);
 
-        IRushHourSolver.Step[] memory steps = rushHourPuzzle.solve(inputData);
+        IRushHourSolver.Step[] memory steps = rushHourSolver.solve(inputData);
 
-        console.log("step length: ", steps.length);
         for (uint256 i; i < steps.length; ++i) {
-            // console.log(steps[i]._64Bit_4() + 1, steps[i]._1Bit_1());
+            console.log(steps[i].carId, steps[i].direction == IRushHourSolver.MovementDirection.Up ? "Up" : steps[i].direction == IRushHourSolver.MovementDirection.Right ? "Right" : steps[i].direction == IRushHourSolver.MovementDirection.Down ? "Down" : "Left");
         }
     }
 
