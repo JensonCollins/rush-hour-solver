@@ -5,7 +5,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 import "../src/RushHourSolver.sol";
 import "../src/interface/IRushHourSolver.sol";
-import "../src/Helper.sol";
+import "../src/libraries/Helper.sol";
 
 contract RushHourSolverTest {
     using Helper for uint256;
