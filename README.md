@@ -1,9 +1,3 @@
-## Scenario
-https://dev.to/nonfungiblejc/solving-rush-hour-with-solidity-1-5437
-
-## Memory mapping Usage in solidity
-https://dev.to/nonfungiblejc/memory-mapping-for-rush-hour-in-solidity-a-novel-approach-50bl
-
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
